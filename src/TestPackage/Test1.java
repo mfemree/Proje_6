@@ -95,7 +95,7 @@ public class Test1 {
 
         User user2 = new User("Emma Watson", "2496 spindlehill drive", "Washington", "99212");
 
-        user2.setMyPrice(Items.ItemName("Iphone max"));
+        user2.setMyPrice(Items.ItemName("İphone max"));
         user2.setMyPrice(Items.colorPrice("Red"));
         user2.setMyPrice(Items.customText("I am coming home"));
 

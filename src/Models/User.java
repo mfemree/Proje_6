@@ -8,7 +8,7 @@ public class User {
     private String city;
     private String adres;
     private String zipCode;
-    private String myPrice;
+    private double myPrice;
     private String shippingTrackingNumber;
 
 
@@ -51,12 +51,12 @@ public class User {
 
     }
 
-    public String getMyPrice() {
-        return myPrice;
+    public double getMyPrice() {
+        return this.myPrice;
     }
 
-    public void setMyPrice(String myPrice) {
-        this.myPrice = myPrice;
+    public void setMyPrice(double myPrice) {
+        this.myPrice += myPrice;
     }
 /*
 
@@ -74,15 +74,15 @@ public class User {
 
     // toString methodunu değiştirmenize gerek yoktur, sadece görsel anlam ifade etmektedir
 
-//    @Override
-//    public String toString() {
-//        return "----------------\n" +
-//                "Full Name : " + this.fullName + '\n' +
-//                "City : " + this.city + '\n' +
-//                "Adress : " + this.address + '\n' +
-//                "Zip Code : " + this.zipCode + '\n' +
-//                "Your Shipping Tracking Number : " + this.shippingTrackingNumber + '\n' +
-//                "Total User Price : " + this.myPrice + '\n' +
-//                "----------------";
-//    }
+    @Override
+    public String toString() {
+        return "----------------\n" +
+                "Full Name : " + this.fullName + '\n' +
+                "City : " + this.city + '\n' +
+                "Adress : " + this.adres + '\n' +
+                "Zip Code : " + this.zipCode + '\n' +
+                "Your Shipping Tracking Number : " + this.shippingTrackingNumber + '\n' +
+                "Total User Price : " + this.myPrice + '\n' +
+                "----------------";
+    }
 }
