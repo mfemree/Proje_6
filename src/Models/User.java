@@ -11,6 +11,7 @@ public class User {
     private String myPrice;
     private String shippingTrackingNumber;
 
+
     /*
         User içerisinde attribute larin hepsi private tanımlanmalı.
 
@@ -40,7 +41,24 @@ public class User {
 
      */
 
-    /*
+    public User(String fullName, String adres, String city, String zipCode) {
+
+        this.fullName = fullName;
+        this.city = HelperFunctions.checkCity(city);
+        this.adres = adres;
+        this.zipCode = HelperFunctions.checkZipCode(zipCode);
+        this.shippingTrackingNumber = HelperFunctions.generateShippingTrackingNumber( this.fullName, this.city, this.zipCode );
+
+    }
+
+    public String getMyPrice() {
+        return myPrice;
+    }
+
+    public void setMyPrice(String myPrice) {
+        this.myPrice = myPrice;
+    }
+/*
 
         myPrice için bir getter bir de setter method oluşmalı
 

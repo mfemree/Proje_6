@@ -30,8 +30,10 @@ public class HelperFunctions {
      */
 
     public static String checkCity(String city){
+
 //    if (Address.getCityList().contains(city)) return city;
 //    else System.out.println("We can not continue your process because, there is no shipping that location.");
+
         try {
             if (Address.getCityList().contains(city)) return city;
             else throw new RuntimeException("We can not continue your process because, there is no shipping that location.");
@@ -93,7 +95,7 @@ public class HelperFunctions {
             if ( zipCode.length() == 5 && zipCode.replace("[^0-9]",""   ).length() == 5 )
                 return zipCode;
 
-            throw new RuntimeException("Please enter valid Zip Code");
+            throw new RuntimeException ("Please enter valid Zip Code");
 
         }catch (RuntimeException ex ) {
         System.out.println( ex.getMessage());
@@ -101,7 +103,4 @@ public class HelperFunctions {
 
         return null;
     }
-
-
-
 }

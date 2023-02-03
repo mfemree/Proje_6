@@ -1,5 +1,7 @@
 package Database;
 
+import java.util.Locale;
+
 public class Items {
 
     /*
@@ -33,9 +35,34 @@ public class Items {
 
     // Method buraya yazılacak
 
-    //---------------------------------------------------------------------------------------
+ public static double ItemName ( String itemName ) {
 
-    //---------------------------------------------------------------------------------------
+     double price=0;
+
+     switch (itemName.toLowerCase() ){
+
+         case "rose teddy bear":
+         case "mug":
+             price = 30;
+             break;
+         case "iphone max":
+             price = 850.23;
+             break;
+         case "laptop mouse":
+             price = 23.50;
+             break;
+         case "monitor":
+             price = 90.23;
+             break;
+         case "charger":
+             price = 43.20;
+             break;
+         case "hdmi cable":
+             price = 5.90;
+             break;
+     }
+   return price;
+ }
 
     /*
 
@@ -55,9 +82,27 @@ public class Items {
 
     // Method buraya yazılacak
 
-    //---------------------------------------------------------------------------------------
+public static double colorPrice (String color) {
 
-    //---------------------------------------------------------------------------------------
+    double price=0;
+
+    switch (color.toLowerCase()) {
+
+        case "red":
+            price = 10;
+            break;
+        case "blue":
+            price = 6;
+            break;
+        case "black":
+            price = 4;
+            break;
+        case "white":
+            price = 2;
+            break;
+    }
+    return price;
+}
 
     /*
 
@@ -75,10 +120,17 @@ public class Items {
 
     // Method buraya yazılacak
 
-    //---------------------------------------------------------------------------------------
+    public static double customText (String text) {
 
+        double lenghtt;
 
+        if ( text.length() > 10 )
+            lenghtt =5;
+        else
+            lenghtt =3;
 
+     return lenghtt;
+    }
 }
 
 
