@@ -86,9 +86,22 @@ public class HelperFunctions {
         diğer durumda ise zipCode unu döndürmeli
      */
 
-    // Method buraya yazılacak
+    public static String checkZipCode(String zipCode) {
 
-    //---------------------------------------------------------------------------------------
+        try{
+
+            if ( zipCode.length() == 5 && zipCode.replace("[^0-9]",""   ).length() == 5 )
+                return zipCode;
+
+            throw new RuntimeException("Please enter valid Zip Code");
+
+        }catch (RuntimeException ex ) {
+        System.out.println( ex.getMessage());
+        }
+
+        return null;
+    }
+
 
 
 }
