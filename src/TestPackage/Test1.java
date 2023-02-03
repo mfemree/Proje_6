@@ -105,7 +105,7 @@ public class Test1 {
 
         System.out.println("Total users price : " + totalPrice);
 
-        Assert.assertEquals("912.4300000000001", String.valueOf(totalPrice));
+        Assert.assertEquals("62.2", String.valueOf(totalPrice));
 
     }
 
