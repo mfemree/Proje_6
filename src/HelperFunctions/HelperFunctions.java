@@ -29,11 +29,16 @@ public class HelperFunctions {
 
      */
 
-    // Method buraya yazılacak
-
-    //---------------------------------------------------------------------------------------
-
-    //---------------------------------------------------------------------------------------
+    public static String checkCity(String city){
+//    if (Address.getCityList().contains(city)) return city;
+//    else System.out.println("We can not continue your process because, there is no shipping that location.");
+        try {
+            if (Address.getCityList().contains(city)) return city;
+            else throw new RuntimeException("We can not continue your process because, there is no shipping that location.");
+        }catch (RuntimeException ex){
+            System.out.println(ex.getMessage());
+        }return null;
+    }
 
     /*
 
