@@ -4,8 +4,14 @@ import HelperFunctions.HelperFunctions;
 
 public class User {
 
-    /*
+    private String fullName;
+    private String city;
+    private String adres;
+    private String zipCode;
+    private String myPrice;
+    private String shippingTrackingNumber;
 
+    /*
         User içerisinde attribute larin hepsi private tanımlanmalı.
 
             String fullName;
